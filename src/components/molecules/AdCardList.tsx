@@ -15,7 +15,7 @@ export default function AdCardList({ unitId, count }: AdCardList) {
     }
 
     return (
-        <div className="w-full  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[50px] place-items-center">
+        <div className="w-full mt-[84px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[50px] place-items-center">
             {isLoading ? <span>로딩중</span> : null}
 
             {data?.map((result, idx) => (
