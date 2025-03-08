@@ -34,7 +34,7 @@ export default function AdCardList() {
     }
 
     return (
-        <div className="relative w-full mt-[20px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[50px] place-items-center">
+        <div className="relative w-full mt-[20px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-y-[50px] place-items-center">
             {isLoading ? (
                 <p className="absolute top-0 mx-auto text-center z-1 font-semibold text-[20px]">
                     로딩중...
