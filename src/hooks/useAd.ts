@@ -1,7 +1,6 @@
 import axios from "axios";
 import { AdResult } from "../types/Ad";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { unitIdToBannerType } from "../lib/utils";
 
 export default function useAd(unitId: string, count: number) {
     const fetchAd = async (): Promise<{
@@ -40,7 +39,7 @@ export default function useAd(unitId: string, count: number) {
     };
 
     return useInfiniteQuery({
-        queryKey: [unitIdToBannerType(unitId), unitId, "infinite"],
+        queryKey: [unitId, "infinite"],
         queryFn: fetchAd,
         initialPageParam: true,
         getNextPageParam: (lastPage) => (lastPage.hasMore ? true : undefined),
