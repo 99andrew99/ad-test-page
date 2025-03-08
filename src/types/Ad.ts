@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface AdResult {
     // 필수
     format: string;
@@ -7,6 +8,7 @@ export interface AdResult {
     h: number;
 
     // 선택
+    creativeId?: string;
     advertiser?: string;
     icon?: string;
     cover?: string;
@@ -15,9 +17,9 @@ export interface AdResult {
     body?: string;
     callToAction?: string;
     destinationURL?: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    profile?: any;
+    extra?: any;
     accountTag?: any;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     creativeTag?: any;
 }
 
