@@ -7,7 +7,7 @@ interface AdCardProps {
 export default function AdCard({ adResult }: AdCardProps) {
     return (
         <div
-            className="w-[360px] h-[360px]"
+            className="w-[360px] h-[404px] rounded-[16px] overflow-hidden"
             dangerouslySetInnerHTML={{ __html: adResult.ad }}
         />
     );

@@ -10,12 +10,13 @@ export default function AdCardList({ unitId, count }: AdCardList) {
     const { data, isLoading, error } = useAd(unitId, count);
 
     if (error) {
-        alert("오류");
+        console.log("오류가 발생했습니다.");
+        return null;
     }
 
     return (
-        <div>
-            <span>{isLoading ? "로딩중" : null}</span>
+        <div className="w-full  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[50px] place-items-center">
+            {isLoading ? <span>로딩중</span> : null}
 
             {data?.map((result, idx) => (
                 <AdCard key={idx} adResult={result} />
