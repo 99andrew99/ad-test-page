@@ -3,7 +3,7 @@ import { useDarkStore } from "../../store/darkStore";
 
 function MaterialDesignSwitch() {
     const { isDarkMode, setIsDarkMode } = useDarkStore();
-    console.log(isDarkMode);
+
     return (
         <label
             htmlFor="material-switch"
